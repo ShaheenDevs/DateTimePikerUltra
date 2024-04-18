@@ -1,7 +1,7 @@
-name: date_time_piker_plus
-description: "A new Flutter project."
+name: date_time_picker_plus
+description: "This Flutter package provides a collection of customizable DateTime pickers, including dropdowns, dialog boxes, and widget bases. With this package, developers can easily integrate date and time selection functionality into their Flutter applications with various customization options to suit their UI needs."
 version: 0.0.1
-homepage:
+homepage: https://github.com/TechProgression/DateTimePikerPlus.git
 
 environment:
   sdk: '>=3.2.2 <4.0.0'

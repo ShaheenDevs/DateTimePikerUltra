@@ -1,9 +1,5 @@
 import 'dart:developer';
-
-import 'package:date_time_piker_plus/date_time_piker/date_piker.dart';
-import 'package:date_time_piker_plus/date_time_piker/dialog_datetime_piker.dart';
-import 'package:date_time_piker_plus/date_time_piker/dropdown_datetime_piker.dart';
-import 'package:date_time_piker_plus/date_time_piker/time_piker.dart';
+import 'package:date_time_picker_plus/date_time_picker_plus.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,8 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Date Time Piker Plus',
-      home: MyHomePage(title: 'Date Time Piker Plus'),
+      title: 'Date Time Picker Plus',
+      home: MyHomePage(title: 'Date Time Picker Plus'),
     );
   }
 }
@@ -42,10 +38,20 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            DateTimePickerPlusDialog(),
-            DateTimePickerPlusDropdown(onPress: (p0) {
-              
-            },),
+            // DateTimePickerPlusDialog(
+            //   selectedDate: DateTime.now(),
+            //   initialTime: TimeOfDay.now(),
+            //   showDatePicker: true,
+            //   showTimePicker: true,
+            //   onPress: (DateTime dateTime) {
+            //     log(dateTime.toString());
+            //   },
+            //   iconColor: Colors.grey,
+            //   color: Colors.orangeAccent,
+            // ),
+            DateTimePickerPlusDropdown(
+              onPress: (p0) {},
+            ),
             TimeSelectorPlus(
               onChange: (TimeOfDay timeOfDay) {
                 log(timeOfDay.toString());

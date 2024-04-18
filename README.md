@@ -12,7 +12,7 @@ This Flutter package provides a collection of customizable DateTime pickers, inc
 To use this package in your Flutter project, add it to your pubspec.yaml file:
 
     dependencies:
-      date_time_piker_plus: ^version_number
+      date_time_picker_plus: ^version_number
 Then, run `flutter pub get` to install the package.
 
 ##### Usage:
@@ -24,8 +24,8 @@ Then, run `flutter pub get` to install the package.
             DateTimePickerPlusDialog(
               selectedDate: DateTime.now(),
               initialTime: TimeOfDay.now(),
-              showDatePiker: true,
-              showTimePiker: true,
+              showDatePicker: true,
+              showTimePicker: true,
               onPress: (DateTime dateTime) {
                 log(dateTime.toString());
               },
@@ -84,4 +84,4 @@ Disclaimer:
 This package is provided as-is without any warranty. Use it at your own discretion.
 
 Happy Coding! 🚀
-# DateTimePikerPlus
+# DateTimePickerPlus

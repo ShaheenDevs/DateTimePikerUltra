@@ -1,17 +1,16 @@
 // ignore_for_file: must_be_immutable
-import 'package:date_time_piker_plus/date_time_piker/time_piker.dart';
 import 'package:flutter/material.dart';
-
+import 'time_piker.dart';
 import 'date_piker.dart';
 
 class DateTimePickerPlusDialog extends StatefulWidget {
   Color color;
   Color iconColor;
   Color textColor;
-  bool showDatePiker;
+  bool showDatePicker;
   String title;
   Widget? titleWidget;
-  bool showTimePiker;
+  bool showTimePicker;
   Function(DateTime)? onChangeDate;
   Function(DateTime)? onChangeTime;
   Function(DateTime)? onPress;
@@ -22,8 +21,8 @@ class DateTimePickerPlusDialog extends StatefulWidget {
 
   DateTimePickerPlusDialog({
     super.key,
-    this.showDatePiker = true,
-    this.showTimePiker = true,
+    this.showDatePicker = true,
+    this.showTimePicker = true,
     this.title = 'Tap here to open Date Time dropdown',
     this.titleWidget,
     this.onChangeDate,
@@ -75,7 +74,7 @@ class _DateTimePickerPlusDialogState extends State<DateTimePickerPlusDialog> {
                 mainAxisSize: MainAxisSize
                     .min, // Set the size of the column to the minimum
                 children: [
-                  if (widget.showTimePiker)
+                  if (widget.showTimePicker)
                     TimeSelectorPlus(
                       selectedHour: (widget.initialTime.hour % 12) + 1,
                       selectedMint: widget.initialTime.minute,
@@ -95,7 +94,7 @@ class _DateTimePickerPlusDialogState extends State<DateTimePickerPlusDialog> {
                         }
                       },
                     ),
-                  if (widget.showDatePiker)
+                  if (widget.showDatePicker)
                     DatePickerPlus(
                       selectedDate: widget.selectedDate,
                       onChange: (DateTime date) {
