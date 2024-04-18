@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class TimeSelectorPlus extends StatefulWidget {
+class TimeSelectorUltra extends StatefulWidget {
   int selectedHour;
   int selectedMint;
   bool isAm;
@@ -13,7 +13,7 @@ class TimeSelectorPlus extends StatefulWidget {
   Function(TimeOfDay) onChange;
   double borderRadius;
   double textBoxwidth;
-  TimeSelectorPlus(
+  TimeSelectorUltra(
       {super.key,
       this.selectedHour = 1,
       this.selectedMint = 1,
@@ -26,10 +26,10 @@ class TimeSelectorPlus extends StatefulWidget {
       this.textBoxwidth = 60});
 
   @override
-  State<TimeSelectorPlus> createState() => _TimeSelectorPlusState();
+  State<TimeSelectorUltra> createState() => _TimeSelectorUltraState();
 }
 
-class _TimeSelectorPlusState extends State<TimeSelectorPlus> {
+class _TimeSelectorUltraState extends State<TimeSelectorUltra> {
   void _incrementHour() {
     setState(() {
       widget.selectedHour = (widget.selectedHour % 12) + 1;

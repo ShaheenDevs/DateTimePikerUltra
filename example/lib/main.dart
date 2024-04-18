@@ -1,5 +1,5 @@
 import 'dart:developer';
-import 'package:date_time_picker_plus/date_time_picker_plus.dart';
+import 'package:date_time_picker_ultra/date_time_picker_ultra.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Date Time Picker Plus',
-      home: MyHomePage(title: 'Date Time Picker Plus'),
+      title: 'Date Time Picker Ultra',
+      home: MyHomePage(title: 'Date Time Picker Ultra'),
     );
   }
 }
@@ -38,26 +38,42 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // DateTimePickerPlusDialog(
-            //   selectedDate: DateTime.now(),
-            //   initialTime: TimeOfDay.now(),
-            //   showDatePicker: true,
-            //   showTimePicker: true,
-            //   onPress: (DateTime dateTime) {
-            //     log(dateTime.toString());
-            //   },
-            //   iconColor: Colors.grey,
-            //   color: Colors.orangeAccent,
-            // ),
-            DateTimePickerPlusDropdown(
-              onPress: (p0) {},
+            DateTimePickerUltraDialog(
+              selectedDate: DateTime.now(),
+              initialTime: TimeOfDay.now(),
+              showDatePicker: true,
+              showTimePicker: true,
+              onPress: (DateTime dateTime) {
+                log(dateTime.toString());
+              },
+              iconColor: Colors.grey,
+              color: Colors.orangeAccent,
             ),
-            TimeSelectorPlus(
+            DateTimePickerUltraDropdown(
+              selectedDate: DateTime.now(),
+              initialTime: TimeOfDay.now(),
+              showDatePicker: true,
+              showTimePicker: true,
+              onPress: (DateTime dateTime) {
+                log(dateTime.toString());
+              },
+              iconColor: Colors.grey,
+              color: Colors.orangeAccent,
+            ),
+            TimeSelectorUltra(
+              selectedHour: 4,
+              selectedMint: 32,
+              isAm: true,
+              iconColor: Colors.grey,
+              color: Colors.orangeAccent,
               onChange: (TimeOfDay timeOfDay) {
                 log(timeOfDay.toString());
               },
             ),
-            DatePickerPlus(
+            DatePickerUltra(
+              selectedDate: DateTime.now(),
+              iconColor: Colors.grey,
+              color: Colors.orangeAccent,
               onChange: (DateTime date) {
                 log(date.toString());
               },

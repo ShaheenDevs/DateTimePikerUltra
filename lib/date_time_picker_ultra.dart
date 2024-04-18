@@ -1,4 +1,4 @@
-library date_time_picker_plus;
+library date_time_picker_ultra;
 
 export '/date_time_piker/time_piker.dart';
 export '/date_time_piker/date_piker.dart';

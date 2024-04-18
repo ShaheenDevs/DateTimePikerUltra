@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'time_piker.dart';
 import 'date_piker.dart';
 
-class DateTimePickerPlusDropdown extends StatefulWidget {
+class DateTimePickerUltraDropdown extends StatefulWidget {
   Color color;
   Color iconColor;
   Color textColor;
@@ -20,7 +20,7 @@ class DateTimePickerPlusDropdown extends StatefulWidget {
   DateTime selectedDate;
   TimeOfDay initialTime;
 
-  DateTimePickerPlusDropdown({
+  DateTimePickerUltraDropdown({
     super.key,
     this.showDatePicker = true,
     this.showTimePicker = true,
@@ -44,12 +44,12 @@ class DateTimePickerPlusDropdown extends StatefulWidget {
   }
 
   @override
-  State<DateTimePickerPlusDropdown> createState() =>
-      _DateTimePickerPlusDropdownState();
+  State<DateTimePickerUltraDropdown> createState() =>
+      _DateTimePickerUltraDropdownState();
 }
 
-class _DateTimePickerPlusDropdownState
-    extends State<DateTimePickerPlusDropdown> {
+class _DateTimePickerUltraDropdownState
+    extends State<DateTimePickerUltraDropdown> {
   OverlayEntry? _overlayEntry;
 
   void _toggleDropdown(BuildContext context) {
@@ -92,7 +92,7 @@ class _DateTimePickerPlusDropdownState
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       if (widget.showTimePicker)
-                        TimeSelectorPlus(
+                        TimeSelectorUltra(
                           selectedHour: (widget.initialTime.hour % 12) + 1,
                           selectedMint: widget.initialTime.minute,
                           isAm: widget.initialTime.hour <= 12,
@@ -110,7 +110,7 @@ class _DateTimePickerPlusDropdownState
                           },
                         ),
                       if (widget.showDatePicker)
-                        DatePickerPlus(
+                        DatePickerUltra(
                           selectedDate: widget.selectedDate,
                           onChange: (DateTime date) {
                             widget.selectedDate = date;

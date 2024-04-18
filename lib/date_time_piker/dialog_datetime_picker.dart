@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'time_piker.dart';
 import 'date_piker.dart';
 
-class DateTimePickerPlusDialog extends StatefulWidget {
+class DateTimePickerUltraDialog extends StatefulWidget {
   Color color;
   Color iconColor;
   Color textColor;
@@ -19,7 +19,7 @@ class DateTimePickerPlusDialog extends StatefulWidget {
   DateTime selectedDate;
   TimeOfDay initialTime;
 
-  DateTimePickerPlusDialog({
+  DateTimePickerUltraDialog({
     super.key,
     this.showDatePicker = true,
     this.showTimePicker = true,
@@ -43,11 +43,11 @@ class DateTimePickerPlusDialog extends StatefulWidget {
   }
 
   @override
-  State<DateTimePickerPlusDialog> createState() =>
-      _DateTimePickerPlusDialogState();
+  State<DateTimePickerUltraDialog> createState() =>
+      _DateTimePickerUltraDialogState();
 }
 
-class _DateTimePickerPlusDialogState extends State<DateTimePickerPlusDialog> {
+class _DateTimePickerUltraDialogState extends State<DateTimePickerUltraDialog> {
   OverlayEntry? _overlayEntry;
 
   DateTime mergeDateTimeAndTimeOfDay() {
@@ -75,7 +75,7 @@ class _DateTimePickerPlusDialogState extends State<DateTimePickerPlusDialog> {
                     .min, // Set the size of the column to the minimum
                 children: [
                   if (widget.showTimePicker)
-                    TimeSelectorPlus(
+                    TimeSelectorUltra(
                       selectedHour: (widget.initialTime.hour % 12) + 1,
                       selectedMint: widget.initialTime.minute,
                       isAm: widget.initialTime.hour <= 12,
@@ -95,7 +95,7 @@ class _DateTimePickerPlusDialogState extends State<DateTimePickerPlusDialog> {
                       },
                     ),
                   if (widget.showDatePicker)
-                    DatePickerPlus(
+                    DatePickerUltra(
                       selectedDate: widget.selectedDate,
                       onChange: (DateTime date) {
                         setState(() {

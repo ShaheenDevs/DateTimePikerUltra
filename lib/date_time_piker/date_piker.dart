@@ -1,12 +1,12 @@
 // ignore_for_file: must_be_immutable
 import 'package:flutter/material.dart';
 
-class DatePickerPlus extends StatefulWidget {
+class DatePickerUltra extends StatefulWidget {
   Color color;
   Color iconColor;
   DateTime selectedDate;
   Function(DateTime) onChange;
-  DatePickerPlus({
+  DatePickerUltra({
     super.key,
     required this.onChange,
     this.iconColor = Colors.grey,
@@ -14,10 +14,10 @@ class DatePickerPlus extends StatefulWidget {
     DateTime? selectedDate,
   }) : selectedDate = selectedDate ?? DateTime.now();
   @override
-  State<DatePickerPlus> createState() => _DatePickerPlusState();
+  State<DatePickerUltra> createState() => _DatePickerUltraState();
 }
 
-class _DatePickerPlusState extends State<DatePickerPlus> {
+class _DatePickerUltraState extends State<DatePickerUltra> {
   OverlayEntry? _overlayEntry;
 
   @override

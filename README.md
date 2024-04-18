@@ -8,13 +8,13 @@ This Flutter package provides a collection of customizable DateTime pickers, inc
 - **Dropdown DateTime Picker:** A dropdown widget that allows users to select dates and times conveniently.
 - **Dialog Box DateTime Picker:** A dialog box widget that pops up for date and time selection.
 - **Widget Base DateTime Picker:** A basic widget that can be customized and integrated into different UI layouts for date and time selection.
-<img src="https://github.com/TechProgression/DateTimePikerPlus/blob/main/assest/dropdown_datetime_picker.gif" width="200" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/TechProgression/DateTimePikerPlus/blob/main/assest/dialogbox_datetime_picker.gif" width="200" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/TechProgression/DateTimePikerPlus/blob/main/assest/datetime_selector_widgets.gif" width="200" />
+<img src="https://github.com/TechProgression/DateTimePikerUltra/blob/main/assest/dropdown_datetime_picker.gif" width="200" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/TechProgression/DateTimePikerUltra/blob/main/assest/dialogbox_datetime_picker.gif" width="200" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/TechProgression/DateTimePikerUltra/blob/main/assest/datetime_selector_widgets.gif" width="200" />
 
 #### Installation:
 To use this package in your Flutter project, add it to your pubspec.yaml file:
 
     dependencies:
-      date_time_picker_plus: ^version_number
+      date_time_picker_ultra: ^version_number
 Then, run `flutter pub get` to install the package.
 
 ##### Usage:
@@ -23,7 +23,7 @@ Then, run `flutter pub get` to install the package.
     import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 
 ### Dropdown DateTime Picker:
-      DateTimePickerPlusDropdown(
+      DateTimePickerUltraDropdown(
         selectedDate: DateTime.now(),
         initialTime: TimeOfDay.now(),
         showDatePicker: true,
@@ -53,7 +53,7 @@ Then, run `flutter pub get` to install the package.
 
 
 ### Dialog Box DateTime Picker:
-      DateTimePickerPlusDialog(
+      DateTimePickerUltraDialog(
         selectedDate: DateTime.now(),
         initialTime: TimeOfDay.now(),
         showDatePicker: true,
@@ -81,7 +81,7 @@ Then, run `flutter pub get` to install the package.
 - **initialTime (TimeOfDay?):** Initially selected time.
 
 ### Widget Base Date Selector:
-      DatePickerPlus(
+      DatePickerUltra(
         selectedDate: DateTime.now(),
         iconColor: Colors.grey,
         color: Colors.orangeAccent,
@@ -96,7 +96,7 @@ Then, run `flutter pub get` to install the package.
 - **selectedDate (DateTime?):** Initially selected date.
 
 ### Widget Base Time Selector:
-      TimeSelectorPlus(
+      TimeSelectorUltra(
         selectedHour: 4,
         selectedMint: 32,
         isAm: true,
