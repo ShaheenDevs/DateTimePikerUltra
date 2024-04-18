@@ -32,7 +32,12 @@ Then, run `flutter pub get` to install the package.
               iconColor: Colors.grey,
               color: Colors.orangeAccent,
             ),
+
 ![]([https://github.com/Your_Repository_Name/Your_GIF_Name.gif](https://github.com/TechProgression/DateTimePikerPlus/blob/main/assest/dropdown_datetime_picker.gif))
+
+![Screenshot](https://github.com/codemaker2015/React-native-map-view/blob/master/demo/demo.gif)
+
+
 ### Dialog Box DateTime Picker:
 DatePicker.showDatePicker(
   context,
