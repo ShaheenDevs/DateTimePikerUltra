@@ -7,7 +7,9 @@ This Flutter package provides a collection of customizable DateTime pickers, inc
 
 **Dropdown DateTime Picker:** A dropdown widget that allows users to select dates and times conveniently.<br>
 **Dialog Box DateTime Picker:** A dialog box widget that pops up for date and time selection.<br>
-**Widget Base DateTime Picker:** A basic widget that can be customized and integrated into different UI layouts for date and time selection.<br>
+**Widget Base DateTime Picker:** A basic widget that can be customized and integrated into different UI layouts for date and time selection.<be>
+<img src="https://github.com/TechProgression/DateTimePikerPlus/blob/main/assest/dropdown_datetime_picker.gif" width="200" /><img src="https://github.com/TechProgression/DateTimePikerPlus/blob/main/assest/dropdown_datetime_picker.gif" width="200" /><img src="https://github.com/TechProgression/DateTimePikerPlus/blob/main/assest/dropdown_datetime_picker.gif" width="200" />
+
 #### Installation:
 To use this package in your Flutter project, add it to your pubspec.yaml file:
 
@@ -33,9 +35,7 @@ Then, run `flutter pub get` to install the package.
               color: Colors.orangeAccent,
             ),
 
-![]([https://github.com/Your_Repository_Name/Your_GIF_Name.gif](https://github.com/TechProgression/DateTimePikerPlus/blob/main/assest/dropdown_datetime_picker.gif))
 
-![Screenshot](https://github.com/codemaker2015/React-native-map-view/blob/master/demo/demo.gif)
 
 
 ### Dialog Box DateTime Picker:
