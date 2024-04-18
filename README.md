@@ -1,48 +1,38 @@
 
 
-## Overview:
+### Overview:
 This Flutter package provides a collection of customizable DateTime pickers, including dropdowns, dialog boxes, and widget bases. With this package, developers can easily integrate date and time selection functionality into their Flutter applications with various customization options to suit their UI needs.
 
-## Features:
+### Features:
 
-Dropdown DateTime Picker: A dropdown widget that allows users to select dates and times conveniently.
-Dialog Box DateTime Picker: A dialog box widget that pops up for date and time selection.
-Widget Base DateTime Picker: A basic widget that can be customized and integrated into different UI layouts for date and time selection.
-Installation:
+**Dropdown DateTime Picker:** A dropdown widget that allows users to select dates and times conveniently.<br>
+**Dialog Box DateTime Picker:** A dialog box widget that pops up for date and time selection.<br>
+**Widget Base DateTime Picker:** A basic widget that can be customized and integrated into different UI layouts for date and time selection.<br>
+#### Installation:
 To use this package in your Flutter project, add it to your pubspec.yaml file:
 
-yaml
-Copy code
-dependencies:
-  date_time_piker_plus: ^version_number
-Then, run flutter pub get to install the package.
+    dependencies:
+      date_time_piker_plus: ^version_number
+Then, run `flutter pub get` to install the package.
 
-Usage:
-Import the package in your Dart file:
+##### Usage:
+###### Import the package in your Dart file:
 
-dart
-Copy code
-import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
-Dropdown DateTime Picker:
+    import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 
-dart
-Copy code
-DatePicker.showDatePicker(
-  context,
-  showTitleActions: true,
-  onChanged: (date) {
-    // Handle date change
-  },
-  onConfirm: (date) {
-    // Handle date confirmation
-  },
-  currentTime: DateTime.now(),
-  locale: LocaleType.en, // Set your preferred locale
-);
-Dialog Box DateTime Picker:
-
-dart
-Copy code
+### Dropdown DateTime Picker:
+            DateTimePickerPlusDialog(
+              selectedDate: DateTime.now(),
+              initialTime: TimeOfDay.now(),
+              showDatePiker: true,
+              showTimePiker: true,
+              onPress: (DateTime dateTime) {
+                log(dateTime.toString());
+              },
+              iconColor: Colors.grey,
+              color: Colors.orangeAccent,
+            ),
+### Dialog Box DateTime Picker:
 DatePicker.showDatePicker(
   context,
   showTitleActions: true,
@@ -57,10 +47,7 @@ DatePicker.showDatePicker(
   currentTime: DateTime.now(),
   locale: LocaleType.en, // Set your preferred locale
 );
-Widget Base DateTime Picker:
-
-dart
-Copy code
+### Widget Base DateTime Picker:
 DatePickerWidget(
   initialDateTime: DateTime.now(),
   onDateTimeChanged: (date) {
@@ -81,10 +68,11 @@ License:
 This package is licensed under the MIT License.
 
 Author:
-[Your Name/Your Team Name]
+Mudassir Mukhtar
 
 Contact:
-[Your Email/Your Contact Information]
+03454335400
+mudassirmukhtar4@gmail.com
 
 Acknowledgments:
 Thank you to the Flutter community for their contributions and support.
