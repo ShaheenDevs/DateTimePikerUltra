@@ -17,6 +17,8 @@ class DateTimePickerUltraDropdown extends StatefulWidget {
   Function(DateTime)? onPress;
   double borderRadius;
   double textBoxwidth;
+  double towardsTop;
+  double towardsBottom;
   DateTime selectedDate;
   TimeOfDay initialTime;
 
@@ -34,6 +36,8 @@ class DateTimePickerUltraDropdown extends StatefulWidget {
     this.textColor = Colors.black,
     this.borderRadius = 2,
     this.textBoxwidth = 60,
+    this.towardsTop = 100,
+    this.towardsBottom = 0,
     DateTime? selectedDate,
     TimeOfDay? initialTime,
   })  : selectedDate = selectedDate ?? DateTime.now(),
@@ -75,11 +79,20 @@ class _DateTimePickerUltraDropdownState
     RenderBox renderBox = context.findRenderObject() as RenderBox;
     var size = renderBox.size;
     var offset = renderBox.localToGlobal(Offset.zero);
+    var screenSize = MediaQuery.of(context).size;
+    var screenHeight = screenSize.height;
+    bool isAboveCenter = offset.dy < screenHeight / 2;
+    double topPosition;
+    if (isAboveCenter) {
+      topPosition = offset.dy - widget.towardsBottom + size.height;
+    } else {
+      topPosition = offset.dy - widget.towardsTop - screenHeight / 2;
+    }
 
     return OverlayEntry(
       builder: (context) => Positioned(
         left: offset.dx,
-        top: offset.dy + size.height,
+        top: topPosition,
         width: size.width,
         child: Material(
           elevation: 4.0,
