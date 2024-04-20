@@ -1,6 +1,6 @@
 name: date_time_picker_ultra
 description: "Flutter package offers customizable DateTime pickers through dropdowns, dialog boxes, and widget bases for easy integration into applications."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/TechProgression/DateTimePikerUltra.git
 
 environment:

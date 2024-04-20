@@ -8,7 +8,7 @@ This Flutter package provides a collection of customizable DateTime pickers, inc
 - **Dropdown DateTime Picker:** A dropdown widget that allows users to select dates and times conveniently.
 - **Dialog Box DateTime Picker:** A dialog box widget that pops up for date and time selection.
 - **Widget Base DateTime Picker:** A basic widget that can be customized and integrated into different UI layouts for date and time selection.
-<img src="https://github.com/TechProgression/DateTimePikerUltra/blob/main/assest/dropdown_datetime_picker.gif" width="200" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/TechProgression/DateTimePikerUltra/blob/main/assest/dialogbox_datetime_picker.gif" width="200" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/TechProgression/DateTimePikerUltra/blob/main/assest/datetime_selector_widgets.gif" width="200" />
+<img src="https://raw.githubusercontent.com/TechProgression/DateTimePikerUltra/main/assest/dropdown_datetime_picker.gif" width="200" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/TechProgression/DateTimePikerUltra/main/assest/dialogbox_datetime_picker.gif" width="200" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/TechProgression/DateTimePikerUltra/main/assest/datetime_selector_widgets.gif" width="200" />
 
 #### Installation:
 To use this package in your Flutter project, add it to your pubspec.yaml file:
@@ -98,7 +98,7 @@ Then, run `flutter pub get` to install the package.
 ### Widget Base Time Selector:
       TimeSelectorUltra(
         selectedHour: 4,
-        selectedMint: 32,
+        selectedMinute: 32,
         isAm: true,
         iconColor: Colors.grey,
         color: Colors.orangeAccent,
@@ -108,7 +108,7 @@ Then, run `flutter pub get` to install the package.
       ),
 #### Customization Options:
 - **selectedHour (int):** Initially selected hour.
-- **selectedMint (int):** Initially selected minute.
+- **selectedMinute (int):** Initially selected minute.
 - **isAm (bool):** Whether the selected time is in AM or PM.
 - **onChange (Function(TimeOfDay)):** Callback function triggered when the time changes.
 - **iconColor (Color):** Color of the dropdown icon.

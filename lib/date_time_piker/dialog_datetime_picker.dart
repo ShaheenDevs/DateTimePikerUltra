@@ -6,7 +6,7 @@ import 'date_piker.dart';
 class DateTimePickerUltraDialog extends StatefulWidget {
   Color color;
   Color iconColor;
-  Color textColor;
+  Color dialogBoxColor;
   bool showDatePicker;
   String title;
   Widget? titleWidget;
@@ -23,15 +23,15 @@ class DateTimePickerUltraDialog extends StatefulWidget {
     super.key,
     this.showDatePicker = true,
     this.showTimePicker = true,
-    this.title = 'Tap here to open Date Time dropdown',
+    this.title = 'Tap here to open Date Time Dialog',
     this.titleWidget,
     this.onChangeDate,
     this.onChangeTime,
     this.onPress,
     this.iconColor = Colors.grey,
     this.color = Colors.orangeAccent,
-    this.textColor = Colors.black,
-    this.borderRadius = 2,
+    this.dialogBoxColor = Colors.white,
+    this.borderRadius = 6,
     this.textBoxwidth = 60,
     DateTime? selectedDate,
     TimeOfDay? initialTime,
@@ -63,6 +63,10 @@ class _DateTimePickerUltraDialogState extends State<DateTimePickerUltraDialog> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
+        shape: RoundedRectangleBorder(
+            borderRadius:
+                BorderRadius.all(Radius.circular(widget.borderRadius))),
+        backgroundColor: widget.dialogBoxColor,
         actionsPadding: const EdgeInsets.all(0),
         contentPadding: const EdgeInsets.all(6),
         content: SizedBox(
@@ -71,17 +75,15 @@ class _DateTimePickerUltraDialogState extends State<DateTimePickerUltraDialog> {
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize
-                    .min, // Set the size of the column to the minimum
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   if (widget.showTimePicker)
                     TimeSelectorUltra(
                       selectedHour: (widget.initialTime.hour % 12) + 1,
-                      selectedMint: widget.initialTime.minute,
+                      selectedMinute: widget.initialTime.minute,
                       isAm: widget.initialTime.hour <= 12,
                       iconColor: widget.iconColor,
                       color: widget.color,
-                      textColor: widget.textColor,
                       borderRadius: widget.borderRadius,
                       textBoxwidth: widget.textBoxwidth,
                       onChange: (TimeOfDay time) {

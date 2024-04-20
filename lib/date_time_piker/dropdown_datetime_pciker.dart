@@ -7,7 +7,6 @@ import 'date_piker.dart';
 class DateTimePickerUltraDropdown extends StatefulWidget {
   Color color;
   Color iconColor;
-  Color textColor;
   bool showDatePicker;
   String title;
   Widget? titleWidget;
@@ -33,8 +32,7 @@ class DateTimePickerUltraDropdown extends StatefulWidget {
     this.onPress,
     this.iconColor = Colors.grey,
     this.color = Colors.orangeAccent,
-    this.textColor = Colors.black,
-    this.borderRadius = 2,
+    this.borderRadius = 6,
     this.textBoxwidth = 60,
     this.towardsTop = 100,
     this.towardsBottom = 0,
@@ -95,9 +93,15 @@ class _DateTimePickerUltraDropdownState
         top: topPosition,
         width: size.width,
         child: Material(
+          borderRadius: BorderRadius.circular(widget.borderRadius),
           elevation: 4.0,
           child: Container(
-            color: Colors.white,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.all(
+                Radius.circular(widget.borderRadius),
+              ),
+            ),
             child: SingleChildScrollView(
               child: Stack(
                 children: [
@@ -107,11 +111,10 @@ class _DateTimePickerUltraDropdownState
                       if (widget.showTimePicker)
                         TimeSelectorUltra(
                           selectedHour: (widget.initialTime.hour % 12) + 1,
-                          selectedMint: widget.initialTime.minute,
+                          selectedMinute: widget.initialTime.minute,
                           isAm: widget.initialTime.hour <= 12,
                           iconColor: widget.iconColor,
                           color: widget.color,
-                          textColor: widget.textColor,
                           borderRadius: widget.borderRadius,
                           textBoxwidth: widget.textBoxwidth,
                           onChange: (TimeOfDay time) {

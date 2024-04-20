@@ -5,24 +5,22 @@ import 'package:intl/intl.dart';
 
 class TimeSelectorUltra extends StatefulWidget {
   int selectedHour;
-  int selectedMint;
+  int selectedMinute;
   bool isAm;
   Color color;
   Color iconColor;
-  Color textColor;
   Function(TimeOfDay) onChange;
   double borderRadius;
   double textBoxwidth;
   TimeSelectorUltra(
       {super.key,
       this.selectedHour = 1,
-      this.selectedMint = 1,
+      this.selectedMinute = 1,
       this.isAm = true,
       required this.onChange,
       this.iconColor = Colors.grey,
       this.color = Colors.orangeAccent,
-      this.textColor = Colors.black,
-      this.borderRadius = 2,
+      this.borderRadius = 6,
       this.textBoxwidth = 60});
 
   @override
@@ -43,16 +41,16 @@ class _TimeSelectorUltraState extends State<TimeSelectorUltra> {
     });
   }
 
-  void _incrementMint() {
+  void _incrementMinute() {
     setState(() {
-      widget.selectedMint = (widget.selectedMint % 60) + 1;
+      widget.selectedMinute = (widget.selectedMinute % 60) + 1;
     });
   }
 
-  void _decrementMint() {
+  void _decrementMinute() {
     setState(() {
-      widget.selectedMint =
-          widget.selectedMint == 1 ? 60 : widget.selectedMint - 1;
+      widget.selectedMinute =
+          widget.selectedMinute == 1 ? 60 : widget.selectedMinute - 1;
     });
   }
 
@@ -105,7 +103,17 @@ class _TimeSelectorUltraState extends State<TimeSelectorUltra> {
                       ),
                     ),
                     Container(
-                      color: widget.color,
+                      decoration: BoxDecoration(
+                        color: widget.color,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(
+                            widget.borderRadius,
+                          ),
+                          bottomRight: Radius.circular(
+                            widget.borderRadius,
+                          ),
+                        ),
+                      ),
                       child: Column(
                         children: [
                           InkWell(
@@ -138,21 +146,31 @@ class _TimeSelectorUltraState extends State<TimeSelectorUltra> {
                       width: widget.textBoxwidth,
                       child: Center(
                         child: Text(
-                          '${widget.selectedMint}',
+                          '${widget.selectedMinute}',
                           style: const TextStyle(fontSize: 24),
                         ),
                       ),
                     ),
                     Container(
-                      color: widget.color,
+                      decoration: BoxDecoration(
+                        color: widget.color,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(
+                            widget.borderRadius,
+                          ),
+                          bottomRight: Radius.circular(
+                            widget.borderRadius,
+                          ),
+                        ),
+                      ),
                       child: Column(
                         children: [
                           InkWell(
-                            onTap: _incrementMint,
+                            onTap: _incrementMinute,
                             child: const Icon(Icons.keyboard_arrow_up_rounded),
                           ),
                           InkWell(
-                            onTap: _decrementMint,
+                            onTap: _decrementMinute,
                             child:
                                 const Icon(Icons.keyboard_arrow_down_rounded),
                           ),
@@ -183,7 +201,17 @@ class _TimeSelectorUltraState extends State<TimeSelectorUltra> {
                       ),
                     ),
                     Container(
-                      color: widget.color,
+                      decoration: BoxDecoration(
+                        color: widget.color,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(
+                            widget.borderRadius,
+                          ),
+                          bottomRight: Radius.circular(
+                            widget.borderRadius,
+                          ),
+                        ),
+                      ),
                       child: Column(
                         children: [
                           InkWell(
